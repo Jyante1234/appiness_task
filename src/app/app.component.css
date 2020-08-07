@@ -1,0 +1,33 @@
+.main-wrapper {
+    padding: 10px;
+}
+ul {
+    padding: 0;
+}
+.users-wrapperIn, .repos-wrapperIn {
+    box-shadow: 0px 5px 10px 0.1px rgba(0,0,0,0.1);
+    padding: 10px;
+}
+.users-wrapperIn li, .repos-wrapperIn li{
+    list-style-type: none;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
+.users-wrapperIn .user-avatar{
+    width: 50px;
+    border-radius: 50%;
+}
+.users-wrapperIn li .users-div {
+    padding: 5px;
+    cursor: pointer;
+}
+.users-wrapperIn li .users-div:hover {
+    background-color: #ececec;
+}
+.users-wrapperIn li .user-name:hover {
+    text-decoration: underline;
+}
+.repos-wrapperIn .clone-span {
+    color: aqua;
+    cursor: pointer;
+}

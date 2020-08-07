@@ -1,0 +1,45 @@
+<div class="main-wrapper">
+  <div class="main-wrapperIn container m-0 w-100">
+    <div class="row">
+      <div class="users-wrapper col-lg-4 col-xs-12">
+        <div class="users-wrapperIn">
+          <input class="w-100 form-control" placeholder="Search" (input)="filterUser($event.target.value)">
+          <ul>
+            <li *ngFor="let user of usersList">
+              <div class="users-div">
+                <img src="{{user.avatar_url}}" alt="{{user.login}}" class="user-avatar">
+                <span class="user-name" (click)="gerAssociatedRepos(user)" title="{{user.login | titlecase}}">
+                  {{user.login | titlecase}}
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="repos-wrapper col-lg-8 col-xs-12">
+        <div class="repos-wrapperIn">
+          <p class="text-align-center" *ngIf="associatedReposList.length === 0">Click on user to get repositories of
+            that user</p>
+          <div *ngIf="associatedReposList.length >= 1">
+            <ul class="row m-0">
+              <div class="col-lg-6">
+                <p>Repository Names</p>
+              </div>
+              <div class="col-lg-6">
+                <p>Clone URL</p>
+              </div>
+              <li class="w-100 row m-0" *ngFor="let repos of associatedReposList">
+                <div class="col-lg-6">
+                  <span>{{repos.name | titlecase}}</span>
+                </div>
+                <div class="col-lg-6">
+                  <span>Clone this repo <span class="clone-span" (click)="cloneURL(repos.clone_url)">here.</span></span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
