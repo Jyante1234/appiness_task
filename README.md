@@ -12,7 +12,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
     - Requirements
         - Angular CLI [Version : 7.x.x  and higher] 
     - Project cloning
-        - URL [Appiness]()
+        - URL - https://github.com/Jyante1234/appiness_task.git
 
 - ### Usage
 
